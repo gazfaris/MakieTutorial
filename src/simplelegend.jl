@@ -1,6 +1,6 @@
-"""
+#= """
 If you add label attributes to your plots, you can call the axislegend function to add a legend with all labeled plots to the current axis.
-"""
+"""=#
 
 using CairoMakie
 

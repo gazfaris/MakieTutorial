@@ -46,7 +46,6 @@ Note, the notation 0..10 above creates a closed interval from 0 to 10 (see Inter
 Axes also have many attributes that you can set, for example to give them a title, or labels.
 =#
 
-
 ax1.title = "sin"
 ax2.title = "cos"
 ax3.title = "sqrt"
