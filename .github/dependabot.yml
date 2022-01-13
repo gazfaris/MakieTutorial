@@ -5,12 +5,12 @@
 
 version: 2
 updates:
-  - package-ecosystem: bundler
+
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: monthly
-   # open-pull-requests-limit: 50
-
+      interval: "daily"
 
    - package-ecosystem: "github-actions"
     directory: "/"
