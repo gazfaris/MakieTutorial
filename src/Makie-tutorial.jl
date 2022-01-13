@@ -5,7 +5,7 @@ module main()
 include("sinCos.jl")
 
 #--- Array Attributes
-include("arrayAttribs.jl")
+include("arrayAttribs.jl"  )
 
 
 #--- Simple legend
