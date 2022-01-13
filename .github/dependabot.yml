@@ -11,9 +11,10 @@ updates:
     interval: daily
     time: '03:00'
     timezone: Europe/Berlin
-  - package-ecosystem: "gradle"
+
+  # Maintain dependencies for Composer
+  - package-ecosystem: "composer"
     directory: "/"
     schedule:
-      # Check for updates managed by gradle once a week
       interval: "daily"
       time: '12:00'
