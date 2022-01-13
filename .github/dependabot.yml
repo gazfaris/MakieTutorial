@@ -5,20 +5,33 @@
 
 version: 2
 updates:
-  - package-ecosystem: "" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: bundler
+    directory: "/"
     schedule:
+      interval: monthly
+   # open-pull-requests-limit: 50
+
+
+   - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      # Check for updates to GitHub Actions every weekday
       interval: "daily"
 
-  # Maintain dependencies for Composer
   - package-ecosystem: "composer"
     directory: "/"
     schedule:
-      interval: "daily"
-      
-  - package-ecosystem: "github-actions"
-    # Workflow files stored in the
-    # default location of `.github/workflows`
+      # Check for updates managed by Composer once a week
+      interval: "weekly"
+
+  - package-ecosystem: "gradle"
     directory: "/"
     schedule:
+      # Check for updates managed by Composer once a week
       interval: "daily"
+      
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: monthly
+    #open-pull-requests-limit: 10
