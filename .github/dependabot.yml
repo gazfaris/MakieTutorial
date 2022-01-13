@@ -11,3 +11,9 @@ updates:
     interval: daily
     time: '03:00'
     timezone: Europe/Berlin
+  - package-ecosystem: "gradle"
+    directory: "/"
+    schedule:
+      # Check for updates managed by gradle once a week
+      interval: "daily"
+      time: '12:00'
