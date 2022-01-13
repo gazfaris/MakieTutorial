@@ -1,4 +1,6 @@
 #using CairoMakie  #imports Makie  (w/ different plot functions )
+module main()
+
 
 include("sinCos.jl")
 
@@ -12,8 +14,10 @@ include("simplelegend.jl")
 #---Subplots
 include("legend.jl");
 #------ Legend
-slash="//"
+
 #include(src\legend.jl)
 include("legend.jl");
 
 #import "legend.jl"
+
+end  # module
