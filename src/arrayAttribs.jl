@@ -6,8 +6,10 @@ Here are the two scatter plots again, but one has varying markersize, and the ot
 
 ```
 
+range(5, 15, length=100)
+
 #---
-include("CairoRefs.jl")
+include("includes.jl")
 #sing CairoMakie
 
 x = range(0, 10, length = 100)
@@ -17,6 +19,18 @@ scatter(x, y1, color = :red, markersize = range(5, 15, length=100))
 sc = scatter!(x, y2, color = range(0, 1, length=100), colormap = :thermal)
 
 current_figure()
+
+#---
+function scattergram(fun1, fun2, variable,minBound,maxBound,numPoints::Integer,color)
+
+return scatter(variable, fun1, color, markersize = range(minBound,maxBound,length=numPoints))
+
+end
+
+
+#---
+displayfigure() = current_figure()
+
 
 #-----------
 
@@ -47,7 +61,6 @@ Of course you can also use an array of colors directly, in which case the colorr
 
 #using CairoMakie
 
-include("includes.jl")
 x = range(0, 10, length=100)
 y = sin.(x)
 
