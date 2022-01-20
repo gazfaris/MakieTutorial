@@ -7,7 +7,7 @@ In the same way as with the Axis before, you can also create a Legend manually a
 You can see here that we can deconstruct the return value from the two lines calls into one newly created axis and one plot object each. We can then feed the plot objects to the legend constructor. We place the legend in the second column and across both rows, which centers it nicely next to the two axes.
 ```
 #using CairoMakie
-include("cairoRefs.jl")
+include("includes.jl")
 
 fig = Figure()
 ax1, l1 = lines(fig[1, 1], 0..10, sin, color = :red)
@@ -31,7 +31,7 @@ fig
 The previous short syntax is basically equivalent to this longer, manual version. You can switch between those workflows however you please.
 ```
 #---
-using CairoMakie
+#using CairoMakie
 
 fig = Figure()
 ax = Axis(fig[1, 1])
@@ -46,7 +46,7 @@ For one-off plots, it can be convenient to set axis or figure settings directly 
 You can pass axis attributes under the keyword axis and figure attributes under the keyword figure.
 ```
 #---
-using CairoMakie
+# using CairoMakie
 
 heatmap(randn(20, 20),
     figure = (backgroundcolor = :pink,),
