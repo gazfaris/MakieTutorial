@@ -1,12 +1,13 @@
-using CairoMakie
-
+#using CairoMakie
+include("includes.jl")
 
 
 x = range(0, 10, length=100)
 y = sin.(x)
 lines(x, y)
 
-using CairoMakie
+#--- scatter Plot
+#using CairoMakie
 
 x = range(0, 10, length=100)
 y = sin.(x)
@@ -14,8 +15,6 @@ scatter(x,y)
 
 
 #--- Multiple Plots
-
-using CairoMakie
 
 x = range(0, 10, length= 100)
 
@@ -29,8 +28,6 @@ current_figure()
 
 #--- Attributes
 
-using CairoMakie
-
 x = range(0, 10, length=100)
 
 y1 = sin.(x)
@@ -42,11 +39,10 @@ lines!(x, y2, color = :blue )
 
 current_figure()
 
-#=
+#---
+```
 Other plotting functions have different attributes. The function scatter, for example, does not only have the color attribute, but also a markersize attribute.
-=#
-
-using CairoMakie
+```
 
 x= range(0,10, length=100)
 y1= sin.(x)
@@ -58,7 +54,6 @@ scatter!(x, y2, color = :blue, markersize = 10)
 
 current_figure()
 #----
-using CairoMakie
 
 x = range(0, 10, length = 100)
 
