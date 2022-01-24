@@ -67,3 +67,5 @@ y = sin.(x)
 colors = repeat([:crimson, :dodgerblue, :slateblue1, :sienna1, :orchid1], 20)
 
 scatter(x, y, color = colors, markersize = 20)
+
+colorm
